@@ -1,0 +1,31 @@
+{
+  "name": "Revenge of Dogos #98",
+  "description": "Angry and hungry dogos, that wants revenge for humanity to payback all their wrongdoings! Every owner showed great heart when donated and also made a new friend, His personal dogo, who will defend him at any cost from others revengeful dogos!",
+  "image": "ipfs://NewUriToReplace/98.png",
+  "dna": "857bafca9ed75336f3184ca811eaa02299c42859",
+  "edition": 98,
+  "date": 1647385001965,
+  "attributes": [
+    {
+      "trait_type": "Cost",
+      "value": "Cost"
+    },
+    {
+      "trait_type": "Background",
+      "value": "meteo_splash"
+    },
+    {
+      "trait_type": "Color",
+      "value": "green_emerald"
+    },
+    {
+      "trait_type": "Mouth",
+      "value": "dragonbreath"
+    },
+    {
+      "trait_type": "Eyes",
+      "value": "possesed"
+    }
+  ],
+  "compiler": "tomikoff and HashLips Art Engine"
+}
