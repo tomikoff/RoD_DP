@@ -1,0 +1,14 @@
+/* ./src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.isNotInstalled{
+  color: black;
+  cursor: not-allowed;
+}
+
+.isInstalled{
+  color: darkblue;
+  width: 555px;
+}
