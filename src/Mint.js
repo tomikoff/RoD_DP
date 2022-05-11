@@ -20,6 +20,10 @@ function Mint(){
 
     return(
         <div className={styles.Page}>
+            <div className={styles.Title}>Blockchain</div>
+            <div className={styles.Title}>Smart contract</div>
+            <div className={styles.Title}>NFT</div>
+            <div className={styles.Title}>NFT collection</div>
             <div className={styles.Title}>What really is Minting?</div>
             <div className={styles.TextDiv}><p className={styles.Text}>Minting is a process when your personal custom NFT is being published onto ethereum blockchain for small minting price.</p></div>
             
@@ -55,8 +59,8 @@ function Mint(){
                 <p className={styles.Text}>Every minted NFT is different and unique.</p>
             </div>
 
-            <div className={styles.Title}>Lets Mint your first unique NFT !</div>
-            <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Minting">Mint me!</Link></ColorButton></h1>
+            <div className={styles.Title}>Lets Donate and Mint your first unique NFT !</div>
+            <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Donate">Donate and Mint!</Link></ColorButton></h1>
         </div>
     );
 }

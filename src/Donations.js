@@ -35,7 +35,7 @@ function Donations(){
                 </div>
             <div className={styles.Title}> More about minting and RoD NFT !</div>
 
-            <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Mint">SEE MORE!</Link></ColorButton></h1>
+            <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Learn">SEE MORE!</Link></ColorButton></h1>
 
             
             <div id="DonationsWho" className={styles.Title}> Who can you donate to?</div>

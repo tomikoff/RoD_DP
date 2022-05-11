@@ -46,7 +46,7 @@ function HomePage(){
                     <p className={styles.Text} >Try to Mint your personal NFT dog. You just need to connect your Crypto Wallet and you can start minting and helping out!</p>
                 </div>
 
-                <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Mint">About minting</Link></ColorButton></h1>
+                <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Learn">About minting</Link></ColorButton></h1>
                 
             </div>
 

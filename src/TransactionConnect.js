@@ -340,6 +340,7 @@ class WalletInfo extends React.Component {
             MintDisable : true,
             ImagesSupported : false,
             OrgLink : "http://localhost:3000/Donations/",
+            IsUserOrg : false, //default: false
         }
 
        
@@ -760,9 +761,20 @@ class WalletInfo extends React.Component {
         {
             return
         }
+      
+
         myAddress = accounts[0]
         //setA(accounts[0])
         Address = accounts[0]
+
+        // check if user is Organization or owner, if yes, then he can withdraw
+        const OrgAdresses = ["","","","",0xbf6411fA66c85125F06aFddbaB675A9D89F12684];
+        if((myAddress == OrgAdresses[0]) || (myAddress == OrgAdresses[1]) || (myAddress == OrgAdresses[2]) || (myAddress == OrgAdresses[3]) || (myAddress == OrgAdresses[4]))
+        {
+          this.setState({ IsUserOrg : true});
+          console.log("isuserorg: "+ this.state.IsUserOrg);
+        }
+
         //const balance = web3.eth.getBalance(myAddress)
         this.setState({ MetamaskAddress : "Address of your account: "+myAddress,
         WalletBalance : "My balance is: "
@@ -865,12 +877,13 @@ class WalletInfo extends React.Component {
                 </p>
             </div>
 
-        <div className={styles.TextDiv}>
+        {this.state.IsUserOrg &&(<div className={styles.TextDiv}>
         
+          <p className={styles.Text}> Withdraw funds, for all organizations <br></br> 
+          <ColorButton className={styles.Text} variant="outlined"> WITHDRAW!</ColorButton><br></br>
+          </p>
 
-        
-        
-        </div>
+        </div>)}
 
         
       </div>

@@ -27,9 +27,10 @@ function NavBar(){
             <ul className={styles.test}>
                 <li className={styles.LIleft}><Link to="/">Revenge of Dogos</Link></li>
                 <li><a href="/#MintDiv">ABOUT</a></li>
-                <li><Link to="/Minting">MINT</Link></li>
+                <li><Link to="/Learn">LEARN</Link></li>
+                <li><Link to="/Preview">PREVIEW</Link></li>
                 <li><Link to="/SmartContract">SMART CONTRACT</Link></li>
-                <li className={styles.LIright}><Link to="/MintTx">CONNECT!</Link></li>
+                <li className={styles.LIright}><Link to="/Donate">DONATE!</Link></li>
                 
             </ul>  
             <div className={styles.Hamburgerr} onClick={ToggleMobileMenu}>
@@ -44,9 +45,10 @@ function NavBar(){
                 <ul className={styles.ul_mobile}>
                 <li className={styles.LIleft_mobile}><Link  to="/">Revenge of Dogos</Link></li>
                 <li className={styles.li_mobile+" "+styles.Helper}><a href="/#MintDiv">ABOUT</a></li>
-                <li className={styles.li_mobile+" "+styles.Helper}><Link to="/Minting" className={styles.Helper}>MINT</Link></li>
+                <li className={styles.li_mobile+" "+styles.Helper}><Link to="/Learn" className={styles.Helper}>MINT</Link></li>
+                <li className={styles.li_mobile+" "+styles.Helper}><Link to="/Preview" className={styles.Helper}>PREVIEW</Link></li>
                 <li className={styles.li_mobile +" "+styles.Helper}><Link to="/SmartContract" className={styles.Helper} >SMART CONTRACT</Link></li>
-                <li className={styles.LIright + " " + styles.li_mobile}><Link to="/MintTx" className={styles.Helper}>CONNECT!</Link></li>
+                <li className={styles.LIright + " " + styles.li_mobile}><Link to="/Donate" className={styles.Helper}>DONATE!</Link></li>
                 </ul>
             </div>)
             }

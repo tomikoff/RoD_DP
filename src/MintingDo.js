@@ -67,18 +67,17 @@ function Minting_Do(){
 
     return(
         <div className={styles.Page}>
-            <div className={styles.Title}>Welcome to Minting page!</div>
-            <div className={styles.TextDiv}><p className={styles.Text}>If you dont know anything about minting, <Link className={styles.Clickme} to="/Mint">click here</Link> for brief introduction.</p></div>
+            <div className={styles.Title}>Welcome to RoD collection preview!</div>
+            <div className={styles.TextDiv}><p className={styles.Text}>If you dont know anything about minting, <Link className={styles.Clickme} to="/Learn">click here</Link> for brief introduction.</p></div>
 
             <div className={styles.TextDiv}>
                 <p className={styles.Text}>But essentially, minting is a process when your NFT is being stored on Ethereum blockchain.</p>
-                <p className={styles.Text}>We need to pay a small cost, called minting cost, to store our NFTs onto ipfs storage like Pinata. The cost is minimal, in fact lowest it can be (-0.003eth). </p>
-                <p className={styles.Text}>After that, you need to pick organization you want to donate crypto to (only Ethereum) and choose a value (in Ethers), you want to give them as a donation.</p>   
+                <p className={styles.Text}>NFTs are starting at 0.0001 ether + minting fee. </p>
+                <p className={styles.Text}>After that, you need to pick organization you want to donate crypto to (only Ethereum) and choose a value (ether), you want to give them as a donation.</p>   
                 <p className={styles.Text}>Once you are done with all steps, you will receive your personal, one and only RoD NFT.</p>
             </div>
 
-            <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined">START MINTING!</ColorButton></h1>
-
+          
             <div className={styles.Title}>NFT preview</div>
             <div className={styles.PreviewDiv}>
                 <img className={styles.Img} src={nft1} alt="nft1 preview" ></img>
@@ -93,7 +92,7 @@ function Minting_Do(){
             <div className={styles.Title}>Traits</div>
             <div className={styles.TextDiv}>
                 <p className={styles.Text}>Each NFT of RoD collection is made from multiple possible traits like Eyes, Mouth weapons, Colors, Backgrounds. <br></br> 
-                There is more than 400 unique combinations, but this collection only consist of 350 pieces.
+                There is more than 1600 unique combinations, but this collection only consist out of 350 pieces.
                 </p>
             </div>
 
@@ -107,16 +106,31 @@ function Minting_Do(){
                 <div className={styles.Trait7}><img className={styles.ImgTrait2} src={hh}></img></div>
             </div>
             
-            <div className={styles.Title}>MINT</div>
+            <div className={styles.Title}>Rarity</div>
             <div className={styles.TextDiv}>
-                <p className={styles.Text}>Step 1 - Connect with your MetaMask wallet.<br></br>
-                Step 2 - Choose organization and how much you want to donate.<br></br>
-                Step 3 - Confirm transaction via MetaMask.<br></br>
-                Step 4 - Receive your NFT.
+                <p className={styles.Text}>Rarity of traits
                 </p>
             </div>
 
-            <div><h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined">CONNECT!</ColorButton></h1></div>
+            <div className={styles.Title}>OpenSea link to RoD collection!</div>
+            <h1 className={styles.Title}>
+            <ColorButton className={styles.Text}  variant="outlined"><a href="https://testnets.opensea.io/collection/revenge-of-dogos"> Revenge of Dogos</a></ColorButton>
+            </h1>
+                
+            
+
+            <div className={styles.Title}>LETS MINT YOUR FIRST MINT</div>
+            <div className={styles.TextDiv}>
+                <p className={styles.Text}>Step 1 - Connect with your MetaMask wallet.<br></br>
+                Step 2 - Generate your NFT.<br></br>
+                Step 3 - Choose organization and how much you want to donate.<br></br>
+                Step 4 - Confirm transaction via MetaMask.<br></br>
+                Step 5 - Receive your NFT.
+                </p>
+            </div>
+
+            <div><h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Donate">Donate and Mint!</Link></ColorButton></h1>
+        </div>
         </div>
         
     );

@@ -65,8 +65,8 @@ function App(){
           
           <Route exact path="/SmartContract" element={<SmartContractPAGE/>}></Route>
           <Route exact path="/HomePage" element={<HomePage/>}></Route>
-          <Route exact path="/Mint" element={<Mint/>}></Route>
-          <Route exact path="/Minting" element={<Minting_Do/>}></Route>
+          <Route exact path="/Learn" element={<Mint/>}></Route>
+          <Route exact path="/Preview" element={<Minting_Do/>}></Route>
           <Route exact path="/Donations" element={<Donations/>}></Route>
           <Route exact path="/CID" element={<Helper/>}></Route>
           <Route path="/CID/:id" element = {<CID/>}></Route>
@@ -75,7 +75,7 @@ function App(){
           <Route exact path="/Org" element={
                     <Canvas></Canvas>} />
 
-          <Route exact path="/MintTx" element={
+          <Route exact path="/Donate" element={
                 
                     <TransactionConnect></TransactionConnect>
                    
