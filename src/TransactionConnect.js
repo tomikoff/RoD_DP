@@ -436,11 +436,11 @@ class WalletInfo extends React.Component {
       }
       //const deployedNetwork = data.networks[netId];
       //console.log("deployednetwork : "+deployedNetwork + " adres : "+deployedNetwork.address + " netid "+netId);
-      const greeting = new web3.eth.Contract(
+      const contract = new web3.eth.Contract(
         data.abi,
         "0x2b498D1F842Bc282351A77e21BcfEf8c7Ef5C09e"
       );
-      return greeting;
+      return contract;
     };
 
     getWeb3 = () => {
@@ -596,6 +596,47 @@ class WalletInfo extends React.Component {
       }
     }
     
+    Withdraw = async () =>{
+      const web3 = new Web3(window.ethereum);
+      const contract = await this.getContractTEST(web3);
+      const accounts = await web3.eth.getAccounts();
+      this.WithdrawFunds(contract,accounts); 
+    }
+
+    WithdrawFunds = async(contract,accounts) => {
+      try{
+        console.log("withdraw");
+        await contract.methods
+          .withdraw2()
+          .send({ from: accounts[0]})
+                .on('transactionHash', function (hash) {
+                  console.log('transactionHash');
+                   console.log(hash);
+                 })
+                 .on('confirmation', async function (confirmationNumber, receipt) {
+                   console.log('confirmation');
+                   console.log(confirmationNumber);
+                   console.log(receipt);
+  
+                 })
+                 .on('receipt', function (receipt) {
+                   console.log('receipt');
+                   console.log(receipt);
+                 })
+                .on('error', function (error, receipt) {
+                   console.log('error');
+                  console.log(error);
+                   console.log(receipt);
+                 });
+
+        console.log("withdraw aftr");
+      }catch (e) {
+        console.log("Error with transaction! " + e)
+      }
+
+
+    }
+
     getMyJSON = (NFTnumber,NFTLinkIPFS) =>{
       var donationUPDATE = this.state.donation;
       fetch(window.location.origin + '/nft/json/'+ NFTnumber +'.json'
@@ -740,7 +781,7 @@ class WalletInfo extends React.Component {
         {
           OrgName = "#fourthOrg";
         }
-        this.setState({ OrgLink : "http://localhost:3000/Donations/"+OrgName});
+        this.setState({ OrgLink : "http://localhost:3000/Donations/"+OrgName});  //old - "http://localhost:3000/Donations/" new- https://benevolent-crisp-eb1f35.netlify.app/
         
         //console.log("org "+document.getElementById("org-select").value);
     }
@@ -768,7 +809,7 @@ class WalletInfo extends React.Component {
         Address = accounts[0]
 
         // check if user is Organization or owner, if yes, then he can withdraw
-        const OrgAdresses = ["","","","",0xbf6411fA66c85125F06aFddbaB675A9D89F12684];
+        const OrgAdresses = ["","","","",0xbf6411fA66c85125F06aFddbaB675A9D89F12684]; // TO DO : when going to Mainnet ETH
         if((myAddress == OrgAdresses[0]) || (myAddress == OrgAdresses[1]) || (myAddress == OrgAdresses[2]) || (myAddress == OrgAdresses[3]) || (myAddress == OrgAdresses[4]))
         {
           this.setState({ IsUserOrg : true});
@@ -798,6 +839,7 @@ class WalletInfo extends React.Component {
         
             this.setState({ MetaMaskInfo: "MetaMask is installed!",
                 LoginButtonSTYLE : "bg-blue-600 rounded-md p-2 text-white",
+                Margin: "2em",
                 Visibility : "visible",
                 LoginDisable : false
         })
@@ -825,20 +867,17 @@ class WalletInfo extends React.Component {
       
       <div>
         
-        <div className={styles.TextDiv}>
+        <div className={styles.TextDiv2}>
         <button className={this.state.LoginButtonSTYLE } onClick={this.logInWithMetamask} disabled={this.state.LoginDisable} >Login to MetaMask</button>
         </div>
 
         <h2 className={styles.Title}>Metamask wallet info</h2>
-        
-            
-        
-            <h3 className={styles.Text}>{this.state.MetamaskAddress}</h3>
+            <h3 className={styles.Text_gold}>{this.state.MetamaskAddress}</h3>
         <div className={styles.TextDiv}>
             
         </div>
 
-        <div className={styles.Title}>MINT</div>
+        <div className={styles.Title}>MINT and DONATE!</div>
             <p className={styles.Text}>{this.state.NFTCollection}</p><br></br>
             <div className={styles.TextDiv}>
                 <p className={styles.Text}>Step 1 - Connect with your MetaMask wallet.<br></br>
@@ -859,16 +898,16 @@ class WalletInfo extends React.Component {
           <div className={styles.TextDiv}>
                 <p className={styles.Text}>
                 Step 3 - Choose organization and how much you want to donate. <br></br>
-                <select name="orgs" id="org-select" onChange={this.orgNumber}>
+                <select className={styles.Text2} name="orgs" id="org-select" onChange={this.orgNumber}>
                   <option value="1">--Please choose an organizations--</option>
                   <option selected value="1">Hope for paws</option>
                   <option value="2">Paws</option>
-                  <option value="3">Life Saver dogs</option>
+                  <option value="3">Impact Index Fund</option>
                   <option value="4">Edinburgh Dog and Cat home</option>
               </select> <a href={this.state.OrgLink} target="_blank">Link</a>
 
               <h2> Put number in Ethers</h2>
-              <input type="number" id="donationmoney" inputMode="decimal" onChange={this.donationAmount} step="any" min={0.00001} ></input>
+              <input className={styles.Text} type="number" id="donationmoney" inputMode="decimal" onChange={this.donationAmount} step="any" min={0.0001} ></input>
               <br></br>
                 
                 Step 4 - Then just click on DONATE! button, wait for MetaMask and confirm the transaction.<br></br>
@@ -880,7 +919,7 @@ class WalletInfo extends React.Component {
         {this.state.IsUserOrg &&(<div className={styles.TextDiv}>
         
           <p className={styles.Text}> Withdraw funds, for all organizations <br></br> 
-          <ColorButton className={styles.Text} variant="outlined"> WITHDRAW!</ColorButton><br></br>
+          <ColorButton className={styles.Text} variant="outlined" onClick={this.Withdraw}> WITHDRAW!</ColorButton><br></br>
           </p>
 
         </div>)}

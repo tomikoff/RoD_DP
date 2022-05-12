@@ -21,13 +21,21 @@ function Mint(){
     return(
         <div className={styles.Page}>
             <div className={styles.Title}>Blockchain</div>
-            <div className={styles.Title}>Smart contract</div>
-            <div className={styles.Title}>NFT</div>
-            <div className={styles.Title}>NFT collection</div>
-            <div className={styles.Title}>What really is Minting?</div>
-            <div className={styles.TextDiv}><p className={styles.Text}>Minting is a process when your personal custom NFT is being published onto ethereum blockchain for small minting price.</p></div>
+            <div className={styles.TextDiv}><p className={styles.Text}>Blockchain is a shared, immutable ledger that facilitates the process of recording transactions and tracking assets in a business network. An asset can be tangible (a house, car, cash, land) or intangible (intellectual property, patents, copyrights, branding). Virtually anything of value can be tracked and traded on a blockchain network, reducing risk and cutting costs for all involved.</p></div>
             
-            <div className={styles.Title}>What will you get ?</div>
+            <div className={styles.Title}>Smart contract</div>
+            <div className={styles.TextDiv}><p className={styles.Text}>Smart contracts are simply programs stored on a blockchain that run when predetermined conditions are met. They typically are used to automate the execution of an agreement so that all participants can be immediately certain of the outcome, without any intermediary’s involvement or time loss. They can also automate a workflow, triggering the next action when conditions are met.</p></div>
+            
+            <div className={styles.Title}>NFT</div>
+            <div className={styles.TextDiv}><p className={styles.Text}>An NFT is a digital asset that represents real-world objects like art, music, in-game items and videos. They are bought and sold online, frequently with cryptocurrency, and they are generally encoded with the same underlying software as many cryptos.</p></div>
+            
+            <div className={styles.Title}>NFT collection</div>
+            <div className={styles.TextDiv}><p className={styles.Text}>It is a collection of NFT with same basics, but every NFT in the collection is unique.</p></div>
+            
+            <div className={styles.Title}>Minting</div>
+            <div className={styles.TextDiv}><p className={styles.Text}>Minting is a process when NFT is being published onto Blockchain.</p></div>
+            
+            <div className={styles.Title}>What will you get for donating?</div>
                 <div className={styles.TextDiv}>
                     <p className={styles.Text}>You-ll get your one of a kind Revenge of Dogos NFT.</p>
                     <p className={styles.Text}>You-ll help organization of your choice, with crypto gathered from your purchase.</p>
@@ -40,24 +48,7 @@ function Mint(){
                 <p className={styles.Text}>Nothing.<br></br> Purpose of this NFT is solely helping out animals in needs.</p>
             </div>
 
-            <div className={styles.Title}>NFT preview !</div>
-
-            <div className={styles.PreviewDiv}>
-                <img className={styles.Img} src={nft1} alt="nft1 preview" ></img>
-                <img className={styles.Img} src={nft2} alt="nft2 preview" ></img>
-                <img className={styles.Img} src={nft3} alt="nft3 preview" ></img>
-                <img></img>
-                <img className={styles.Img} src={nft6} alt="nft6 preview" ></img>
-                <img className={styles.Img} src={nft5} alt="nft5 preview" ></img>
-                <img className={styles.Img} src={nft4} alt="nft4 preview" ></img>
-            </div>
-
-            <div className={styles.TextDiv}>
-                <p className={styles.Text}>This collection have One super rare NFT.</p>
-                <p className={styles.Text}>Over 400 unique combinations.</p>
-                <p className={styles.Text}>Only 350 unique combinations can be minted!</p>
-                <p className={styles.Text}>Every minted NFT is different and unique.</p>
-            </div>
+            
 
             <div className={styles.Title}>Lets Donate and Mint your first unique NFT !</div>
             <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Donate">Donate and Mint!</Link></ColorButton></h1>

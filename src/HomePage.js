@@ -60,7 +60,7 @@ function HomePage(){
 
                 <div className={styles.TextDiv}>
                     <p className={styles.Text} >After every mint, We send out crypto currency gained from your purchase to various organizations, that will use the crypto currency for saving animal lifes.
-                Basically, your money for buying Revenge of Dogos NFT, will go to the organization that you choose, as a donation :)</p>
+                Basically, your money for buying Revenge of Dogos NFT, will go to the organization that you choose, as a donation :</p>
                 </div>
 
                 <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Donations">LEARN MORE!</Link></ColorButton></h1>
@@ -79,11 +79,12 @@ function HomePage(){
                 </div>
             </div>
 
-            <div className={styles.ContactDiv}>
+            <div className={styles.DonationsDiv}>
             
                 <h1 className={styles.Title}>Do you have any questions? Contact us!</h1>
-                <div className={styles.Text + " " + styles.Socials}><div className={styles.SocSietVIDtwi} ></div><div className={styles.SocSietVIDfac} ></div><div className={styles.SocSietVIDing} ></div></div>
-                <p className={styles.Text} >Reach out via Instagram, Linked In, or e-mail!</p>
+                <div className={styles.Text + " " + styles.Socials}><a rel="noopener noreferrer" href="https://twitter.com/tomikoff_15" target="_blank" className={styles.SocSietVIDtwi} ></a><a rel="noopener noreferrer" href="https://www.linkedin.com/in/tom%C3%A1%C5%A1-%C5%A1trba-201841206/" target="_blank" className={styles.SocSietVIDfac} ></a><a rel="noopener noreferrer" href="https://www.instagram.com/tomikoff/" target="_blank" className={styles.SocSietVIDing} ></a></div>
+                <p className={styles.Text} >Reach out via Instagram, Linked In, Twitter or e-mail!</p>
+                <p className={styles.Text} >xstrbat1@gmail.com</p>
             
             </div>
         </div>

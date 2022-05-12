@@ -89,6 +89,13 @@ function Minting_Do(){
                 <img className={styles.Img} src={nft4} alt="nft4 preview" ></img>
             </div>
 
+            <div className={styles.TextDiv}>
+                <p className={styles.Text}>This collection have One super rare NFT.</p>
+                <p className={styles.Text}>Over 1600 unique combinations.</p>
+                <p className={styles.Text}>Only 350 unique combinations can be minted!</p>
+                <p className={styles.Text}>Every minted NFT is different and unique.</p>
+            </div>
+
             <div className={styles.Title}>Traits</div>
             <div className={styles.TextDiv}>
                 <p className={styles.Text}>Each NFT of RoD collection is made from multiple possible traits like Eyes, Mouth weapons, Colors, Backgrounds. <br></br> 
@@ -106,10 +113,20 @@ function Minting_Do(){
                 <div className={styles.Trait7}><img className={styles.ImgTrait2} src={hh}></img></div>
             </div>
             
-            <div className={styles.Title}>Rarity</div>
+            <div className={styles.Title + " "+  styles.Clickme}>Rarity</div>
             <div className={styles.TextDiv}>
-                <p className={styles.Text}>Rarity of traits
-                </p>
+                <p className={styles.Text + " "+  styles.Clickme}> Backgrounds:  </p>
+                <p className={styles.Text}>brown fur : 11.14%, dark purple fur : 10.57%, turquoise splash : 10.29%, brownish fur : 9.71%, toxic splash : 8.86%, purple fur : 8.29%, blue fur : 8%, meteo splash : 8%, pink psycho : 6.57%, black and white : 6%, oceanic splash : 5.43%, orange splash : 4%, red rose : 3.14% </p>
+                
+                <p className={styles.Text + " "+  styles.Clickme}> Eyes:  </p>
+                <p className={styles.Text}>lasers : 22.86%, aviation goggles : 22%, possesed : 20.57%, zombie : 18.29%, terminator : 16.29%</p>
+                
+                <p className={styles.Text + " "+  styles.Clickme}> Colors:  </p>
+                <p className={styles.Text}>white : 12.29%,  purple : 12.29%, yellow : 11.71%, black : 11.43%, pink : 11.14%, green emerald : 10.29%, red : 9.71%, base : 5.71%, white extra : 1.71% ,diamond : 1.71%</p>
+                
+                <p className={styles.Text + " "+  styles.Clickme}> Mouth:  </p>
+                <p className={styles.Text}>dragonbreath : 33.71%, lightsaber green : 33.43%, lightsaber yellow : 32.86%</p>
+                
             </div>
 
             <div className={styles.Title}>OpenSea link to RoD collection!</div>

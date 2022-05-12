@@ -6,6 +6,7 @@ import styled from "@emotion/styled";
 import HopeForPaws from "./assets/organizations/HopeForPaws.png"
 import Paws from "./assets/organizations/Paws.png"
 import Lifesaver from "./assets/organizations/Lifesaver.jpg"
+import Impact from "./assets/organizations/ImpactIndexFund.png"
 import Edin from "./assets/organizations/Edin.png"
 
 function Donations(){
@@ -77,15 +78,15 @@ Since 1967, PAWS has united more than 130,000 cats and dogs with loving families
             <div id="thirdOrg" style={{height:"4.6em"}}></div>
             <div className={styles.OrganizationDivLEFT} >
                 <div className={styles.OrganizationTextDiv}>
-                    <h1 className={styles.OrganizationTextTitleLeft}>Life saver dogs (Mint number 3)</h1>
-                    <p className={styles.OrganizationText}>Life Saver Dogs is dedicated to help people with disabilities get a custom-trained service dog tailored to their individual needs. We help people raise most (around 90%) of the money required to finance their service dog, and have our professional service dog trainers select, test and fully train those dogs. We support our service dog recipients throughout the entire process and for the life-time of the service dog.</p>
+                    <h1 className={styles.OrganizationTextTitleLeft}>Impact Index Fund: Animals (Mint number 3)</h1>
+                    <p className={styles.OrganizationText}>Support US-based charities devoted to animal rights and protection with a single donation.</p>
                         <div className={styles.OrganizationContactDiv} >
                             <p className={styles.OrganizationContactText}>Contact : <br></br></p>
-                            <div className={styles.OrganizationContactText}><a href="https://lifesaverdogs.org/">Website</a> <a href="https://www.youtube.com/channel/UCiyjp_is3Xc4Wv05RjGjn9Q">Youtube</a> <a href="https://www.facebook.com/lifesaverdogs">Facebook/Meta</a> <a href="https://www.instagram.com/lifesaverdogs/">Instagram</a></div>
+                            <div className={styles.OrganizationContactText}><a href="https://thegivingblock.com/impact-index-funds/animals/">Website</a> </div>
                         </div>
                 </div>
                 <div className={styles.OrganizationImg}>
-                    <img className={styles.Img} src={Lifesaver} alt="Life Saver Dogs" ></img>
+                    <img className={styles.Img} src={Impact} alt="Impact Index Fund" ></img>
                 </div>
             </div>
 
@@ -108,7 +109,7 @@ Since 1967, PAWS has united more than 130,000 cats and dogs with loving families
 
 
             <div className={styles.Title}>Help these dogos with us, Connect your wallet, mint and get your one of a kind custom Revenge of Dogos NFT.</div>
-            <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Minting">Connect!</Link></ColorButton></h1>
+            <h1 className={styles.Title}><ColorButton className={styles.Text}  variant="outlined"><Link to="/Donate">Connect!</Link></ColorButton></h1>
 
             <div className={styles.TextDiv} ><p className={styles.Text}>Or you can donate without it in each organization description.</p></div>
         </div>
