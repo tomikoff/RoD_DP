@@ -24,6 +24,8 @@
     cursor:default;
     /*min-height: 92.56965944272446vh;*/
     min-height: calc(100vh - 4.5em);
+    background-image: url("../assets/background/dark_3.jpg");
+    background-blend-mode: exclusion;
 }
 
 .Title{

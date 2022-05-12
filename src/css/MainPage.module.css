@@ -124,16 +124,23 @@
     height: auto;
 }
 
-.Socials{
+.Socials_old{
     display: table;
     table-layout: fixed;
-    margin-left: 43.5%; /*stred obrazovky 40.3% a stred textu 41.25 až 41.75%*/
+    background-color: red;
+    margin-left: 41.8125%;
+    /*stred obrazovky 40.3% a stred textu 41.25 až 41.75%*/
 
     
 }
+.Socials{
+    width: 100%;
+    background-color: transparent;
+    text-align: center;
+}
 .SocSietVIDtwi
 {
-  display: table-cell; height: 3.75em; width: 3.75em; padding: 1em; background-image: url("../assets/socialnesiete/Twitter_icon.png"); background-position: center;
+  display: inline-block; height: 3.75em; width: 3.75em; padding: 1em; background-image: url("../assets/socialnesiete/Twitter_icon.png"); background-position: center;
                 background-repeat: no-repeat;
                 background-size: 50px 50px; cursor: pointer;
 }
@@ -144,7 +151,7 @@
 }
 .SocSietVIDing
 {
-  display: table-cell; height: 3.75em; width: 3.75em; padding: 1em; background-image: url("../assets/socialnesiete/instagram_icon.png"); background-position: center;
+  display: inline-block; height: 3.75em; width: 3.75em; padding: 1em; background-image: url("../assets/socialnesiete/instagram_icon.png"); background-position: center;
                 background-repeat: no-repeat;
                 background-size: 50px 50px;cursor: pointer;
 }
@@ -155,13 +162,13 @@
 }
 .SocSietVIDfac
 {
-  display: table-cell; height: 3.75em; width: 3.75em; padding: 1em; background-image: url("../assets/socialnesiete/facebook_icon.png"); background-position: center;
+  display: inline-block; height: 3.75em; width: 3.75em; padding: 1em; background-image: url("../assets/socialnesiete/linkedin.png"); background-position: center;
                 background-repeat: no-repeat;
                 background-size: 50px 50px;cursor: pointer;
 }
 .SocSietVIDfac:hover
 {
-  background-image: url("../assets/socialnesiete/facebook_icon_hower.png");
+  background-image: url("../assets/socialnesiete/linkedin2.png");
   transform: scale(1.1);
 }
 /*------------------------- media queries---------------------------/*/
